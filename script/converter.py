@@ -1,4 +1,5 @@
 import init
+from init import *
 
 NEW_VAR = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 grammar = init.init_grammar('cfg.txt')
