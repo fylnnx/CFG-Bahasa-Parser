@@ -93,3 +93,5 @@ def cyk(s):
 
     return table
 
+grammar = init_grammar(r'cnf.txt')
+
