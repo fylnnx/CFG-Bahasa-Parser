@@ -71,8 +71,8 @@ def view_streamlit():
 
         # action if button clicked
         if button:
-            # show error when no string or just one string entered
-            if len(check_string) <= 1:
+            # show error when string entered < 2
+            if len(check_string) < 2:
                 st.error("Kalimat harus lebih dari 2 kata")
             # else, process the filing table
             elif sentences != '':
