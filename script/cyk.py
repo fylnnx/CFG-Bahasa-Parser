@@ -1,3 +1,4 @@
+# first, put CNF into dictionary
 import streamlit as st
 def init_grammar(filename):
     grammar = {}
