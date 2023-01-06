@@ -1,24 +1,8 @@
 # first, put CNF into dictionary
 import streamlit as st
-def init_grammar(filename):
-    grammar = {}
-    with open(filename, 'r') as file:
-        for line in file:
-            # line lebih besar dari 0 berarti bukan spasi kosong pada txtfile
-            if len(line) > 0:
-                line = line.replace("\n", "")
-                lhs = line.split(" -> ")[0]
-                rhs = line.split(" -> ")[1]
+import init
 
-                # create empty list for each key
-                if line.split(" -> ")[0] not in grammar.keys():
-                    grammar[lhs] = []
-
-                # cari rhs dan pisahkan "|"
-                rhs = rhs.split("|")
-                grammar[lhs] = rhs
-
-    return grammar
+grammar = init.init_grammar('cnf.txt')
 
 
 def find_rule(exp):
@@ -45,7 +29,6 @@ def concat(s1, s2):
             tmp.append(i + ' ' + j)
 
     return tmp
-
 
 def cyk(s):
     s = s.split(" ") # pecah string menjadi list berdasarkan kata
@@ -78,6 +61,7 @@ def cyk(s):
     st.write("Hasil Parsing CYK Table Filling: ")
     # cetak tabel setelah selesai
     print('\n\n')
+    # bikin list baru agar tiap row tercetak dalam 1 tabel
     table2 = []
     for row in table:
         table2.append(row)
