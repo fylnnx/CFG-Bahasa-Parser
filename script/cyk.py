@@ -1,6 +1,6 @@
 # first, put CNF into dictionary
 import streamlit as st
-from init import *
+import init
 
 
 grammar = init.init_grammar(r'cnf.txt')
