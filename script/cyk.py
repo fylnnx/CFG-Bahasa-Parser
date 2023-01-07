@@ -2,7 +2,7 @@
 import streamlit as st
 from script import init
 
-grammar = init.init_grammar(r'C:\Users\ASUS\OneDrive\Dokumen\Tugas smt 3\TBO\FP_TBO_FIX\cnf.txt')
+grammar = init.init_grammar(r'cnf.txt')
 
 
 def find_rule(exp):
